@@ -13,7 +13,7 @@ body {
         "left_dashboard upper_header"
         "left_dashboard right_container";
     grid-template-columns: 0.5fr 3fr;
-    grid-template-rows: 1fr 3fr auto;
+    grid-template-rows: 1fr 3.5fr auto;
     height: 100vh;
     width: 100vw;
 }
@@ -33,7 +33,10 @@ body {
     font-weight: 500;
     overflow-y: auto;
     padding-left: 20px;
+    
 }
+
+
 
 .left_dashboard a {
     text-decoration: none;
@@ -61,6 +64,10 @@ body {
     background-color: white;
     color: white;
     padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "upper_header" "upper_header";
 }
 
 .right_container {
