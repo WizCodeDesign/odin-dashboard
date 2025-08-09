@@ -9,6 +9,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const searchBar = document.getElementById("search_bar");
+        searchBar.addEventListener("focus", function() {
+            this.style.height = "50%";
+        });
+        searchBar.addEventListener("blur", function() {
+            this.style.height = "25%";
+        });
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const projectCards = document.querySelectorAll(".project_card");
+        projectCards.forEach(card => {
+            card.addEventListener("click", function() {
+                if (confirm(`You clicked on ${this.querySelector("h3").textContent}, would you like to open the project in a new tab?`)) {
+                    const projectId = this.id;
+                    const projectUrl = `https://wizcodedesign.github.io/${projectId}`;
+                    window.open(projectUrl, "_blank");
+                }
+            });
+        });
+    });
+</script>
+
 <body>
 
     <div class="grid_container">
@@ -47,7 +73,49 @@
             <button>Share</button>
 
         </div>
-        <div class="right_container"></div>
+        <div class="right_container">
+            
+            <div id="first_column">
+                <h2>My Projects</h2>
+                <div  class="project_card" id="odin-recipes">
+                    <h3>odin-recipes</h3>
+                    <p>Simple recipe website with HTML only</p>
+                </div>
+                <div class="project_card" id="odin-landing-page">
+                    <h3>odin-landing-page</h3>
+                    <p>A landing page project with HTML and CSS to showcase some basic frontend skills.</p>
+                </div>
+                <div class="project_card" id ="odin-rock-paper-scissors">
+                    <h3>odin-rock-paper-scissors</h3>
+                    <p>A simple rock-paper-scissors game with HTML, CSS, and JavaScript.</p>
+                </div>
+                 <div class="project_card" id="odin-etch-a-sketch">
+                    <h3>odin-etch-a-sketch</h3>
+                    <p>A simple etch-a-sketch game with HTML, CSS, and JavaScript Where the user can draw on a canvas using the mouse.</p>
+                </div>
+                <div class="project_card" id ="odin-calculator">
+                    <h3>odin-calculator</h3>
+                    <p>a simple calculator with HTML, CSS, and JavaScript that performs basic arithmetic operations using both mouse and keyboard.</p>
+                </div>
+                <div class="project_card" id ="odin-sign-up-form">
+                    <h3>odin-sign-up-form</h3>
+                    <p>A simple sign-up form with HTML and CSS using flexbox to showcase its layout.</p>
+                </div>
+            </div>
+            <br>
+            <div id="second_column">
+                <h2>Announcements</h2>
+                <div class="project_card">
+                    <h3>Site Maintainance in progress</h3>
+                    <p>We are currently performing site maintenance. Some features may be temporarily unavailable.</p>
+                </div>
+               <h2>Trending</h2>
+                <div class="project_card">
+                    <h3>Project 3</h3>
+                    <p>Description of project 3.</p>
+                </div>
+            </div>
+        </div>
     </div>
     
 </body>
