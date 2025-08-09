@@ -62,14 +62,55 @@ body {
 .upper_header {
     grid-area: upper_header;
     background-color: white;
+    color: black;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 0.1fr 0.5fr 0.2fr 0.08fr 0.1fr;
+    grid-template-rows: 1fr 50%;
+    align-items: center;   
+    justify-items: center; 
+    
+}
+
+#search_bar {
+    background-color: lightgrey;
+    border: 1px solid gray;
+    border-radius: 20px;
+    padding: 5px;
+    gap: 5px;
+    width: 100%;
+}
+
+.upper_header svg:hover {
+    fill: rgb(50, 105, 255);
+    cursor: pointer;
+}
+
+.upper_header img:hover {
+    cursor: pointer;
+    border-radius: 30%;
+    background-color: gold;
+}
+
+.upper_header button {
+    background-color: rgb(100, 155, 255);
     color: white;
-    padding: 20px;
-    display: flex; 
+    border: none;
+    border-radius: 20px;
+    padding: 5px 10px;
+    width: 100px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.upper_header button:hover {
+    background-color: rgb(50, 105, 255);
+    color: white;
 }
 
 .right_container {
     grid-area: right_container;
-    background-color: lightgray;
+    background-color: lightgrey;
     border-top:  rem solid gray;
     border-top-style: outset;
     color: black;
