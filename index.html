@@ -22,7 +22,7 @@
     });
 
     document.addEventListener("DOMContentLoaded", function() {
-        const projectCards = document.querySelectorAll(".project_card");
+        const projectCards = document.querySelectorAll(".project_card_left");
         projectCards.forEach(card => {
             card.addEventListener("click", function() {
                 if (confirm(`You clicked on ${this.querySelector("h3").textContent}, would you like to open the project in a new tab?`)) {
@@ -77,27 +77,27 @@
             
             <div id="first_column">
                 <h2>My Projects</h2>
-                <div  class="project_card" id="odin-recipes">
+                <div  class="project_card_left" id="odin-recipes">
                     <h3>odin-recipes</h3>
                     <p>Simple recipe website with HTML only</p>
                 </div>
-                <div class="project_card" id="odin-landing-page">
+                <div class="project_card_left" id="odin-landing-page">
                     <h3>odin-landing-page</h3>
                     <p>A landing page project with HTML and CSS to showcase some basic frontend skills.</p>
                 </div>
-                <div class="project_card" id ="odin-rock-paper-scissors">
+                <div class="project_card_left" id ="odin-rock-paper-scissors">
                     <h3>odin-rock-paper-scissors</h3>
                     <p>A simple rock-paper-scissors game with HTML, CSS, and JavaScript.</p>
                 </div>
-                 <div class="project_card" id="odin-etch-a-sketch">
+                 <div class="project_card_left" id="odin-etch-a-sketch">
                     <h3>odin-etch-a-sketch</h3>
                     <p>A simple etch-a-sketch game with HTML, CSS, and JavaScript Where the user can draw on a canvas using the mouse.</p>
                 </div>
-                <div class="project_card" id ="odin-calculator">
+                <div class="project_card_left" id ="odin-calculator">
                     <h3>odin-calculator</h3>
                     <p>a simple calculator with HTML, CSS, and JavaScript that performs basic arithmetic operations using both mouse and keyboard.</p>
                 </div>
-                <div class="project_card" id ="odin-sign-up-form">
+                <div class="project_card_left" id ="odin-sign-up-form">
                     <h3>odin-sign-up-form</h3>
                     <p>A simple sign-up form with HTML and CSS using flexbox to showcase its layout.</p>
                 </div>
@@ -105,14 +105,17 @@
             <br>
             <div id="second_column">
                 <h2>Announcements</h2>
-                <div class="project_card">
-                    <h3>Site Maintainance in progress</h3>
+                <div class="project_card_right">
+                    <h3>🌟Site Maintainance in progress</h3>
                     <p>We are currently performing site maintenance. Some features may be temporarily unavailable.</p>
+                    <hr>
+                    <h3>🌟New Features Coming Soon</h3>
                 </div>
                <h2>Trending</h2>
-                <div class="project_card">
-                    <h3>Project 3</h3>
-                    <p>Description of project 3.</p>
+                <div class="project_card_right">
+                    <h3>🌟Done With the Intermediate HTML and CSS Course</h3>
+                    <p>Now I move on to the much Dreaded JavaScript Course with Millions of little projects that will slowly but surely drive me crazy,
+                        wish me luck.</p>
                 </div>
             </div>
         </div>
